@@ -2,13 +2,19 @@
   "name": "vsc-leetcode-cli",
   "version": "2.6.20",
   "description": "A cli tool to enjoy leetcode!",
-  "preferGlobal": "true",
   "engines": {
     "node": ">=4"
   },
   "bin": {
     "leetcode": "./bin/leetcode"
   },
+  "files": [
+    "bin",
+    "colors",
+    "icons",
+    "lib",
+    "templates"
+  ],
   "scripts": {
     "lint": "eslint lib/ test/",
     "test": "npm run lint && nyc mocha test test/plugins && nyc report --reporter=lcov",

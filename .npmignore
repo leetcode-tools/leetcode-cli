@@ -1,7 +1,0 @@
-.github/
-docs/
-test/
-.eslintrc.js
-.travis.yml
-Dockerfile
-.dockerignore
