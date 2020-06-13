@@ -1,8 +1,7 @@
 {
-  "name": "leetcode-cli",
-  "version": "2.6.2",
+  "name": "vsc-leetcode-cli",
+  "version": "2.6.23",
   "description": "A cli tool to enjoy leetcode!",
-  "preferGlobal": "true",
   "engines": {
     "node": ">=4"
   },
@@ -46,9 +45,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/skygragon/leetcode-cli/issues"
+    "url": "https://github.com/leetcode-tools/leetcode-cli/issues"
   },
-  "homepage": "https://github.com/skygragon/leetcode-cli#readme",
+  "homepage": "https://github.com/leetcode-tools/leetcode-cli#readme",
   "dependencies": {
     "ansi-styles": "3.2.1",
     "cheerio": "0.20.0",
@@ -70,8 +69,8 @@
     "eslint-config-google": "0.11.0",
     "mocha": "5.2.0",
     "nock": "10.0.2",
-    "nyc": "13.1.0",
-    "pkg": "^4.3.4",
+    "nyc": "^13.3.0",
+    "pkg": "^4.4.7",
     "rewire": "4.0.1"
   }
 }

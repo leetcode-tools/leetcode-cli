@@ -154,6 +154,13 @@ describe('core', function() {
       file.isWindows = () => false;
 
       const expected = [
+        '/*',
+        ' * @lc app=leetcode id=2 lang=cpp',
+        ' *',
+        ' * [2] Add Two Numbers',
+        ' */',
+        '',
+        '// @lc code=start',
         '/**',
         ' * Definition for singly-linked list.',
         ' * struct ListNode {',
@@ -168,6 +175,7 @@ describe('core', function() {
         '        ',
         '    }',
         '};',
+        '// @lc code=end',
         ''
       ].join('\n');
 
@@ -184,6 +192,13 @@ describe('core', function() {
       file.isWindows = () => true;
 
       const expected = [
+        '/*',
+        ' * @lc app=leetcode id=2 lang=cpp',
+        ' *',
+        ' * [2] Add Two Numbers',
+        ' */',
+        '',
+        '// @lc code=start',
         '/**',
         ' * Definition for singly-linked list.',
         ' * struct ListNode {',
@@ -198,6 +213,7 @@ describe('core', function() {
         '        ',
         '    }',
         '};',
+        '// @lc code=end',
         ''
       ].join('\r\n');
 
@@ -223,6 +239,8 @@ describe('core', function() {
         ' *',
         ' * algorithms',
         ' * Medium (25.37%)',
+        ' * Likes:    1',
+        ' * Dislikes: 1',
         ' * Total Accepted:    195263',
         ' * Total Submissions: 769711',
         ' * Testcase Example:  \'[2,4,3]\\n[5,6,4]\'',
@@ -234,6 +252,8 @@ describe('core', function() {
         ' * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)',
         ' * Output: 7 -> 0 -> 8',
         ' */',
+        '',
+        '// @lc code=start',
         '/**',
         ' * Definition for singly-linked list.',
         ' * struct ListNode {',
@@ -248,6 +268,7 @@ describe('core', function() {
         '        ',
         '    }',
         '};',
+        '// @lc code=end',
         ''
       ].join('\n');
 
@@ -273,6 +294,8 @@ describe('core', function() {
         '#',
         '# algorithms',
         '# Medium (25.37%)',
+        '# Likes:    1',
+        '# Dislikes: 1',
         '# Total Accepted:    195263',
         '# Total Submissions: 769711',
         '# Testcase Example:  \'\'',
@@ -284,6 +307,8 @@ describe('core', function() {
         '# Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)',
         '# Output: 7 -> 0 -> 8',
         '#',
+        '',
+        '# @lc code=start',
         '# Definition for singly-linked list.',
         '# class ListNode',
         '#     attr_accessor :val, :next',
@@ -299,6 +324,7 @@ describe('core', function() {
         'def add_two_numbers(l1, l2)',
         '    ',
         'end',
+        '# @lc code=end',
         ''
       ].join('\n');
 

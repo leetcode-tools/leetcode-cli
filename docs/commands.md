@@ -3,20 +3,20 @@ layout: default
 title: Commands Help
 ---
 
-* [help](#help)
-* [cache](#cache)
-* [config](#config)
-* [list](#list)
-* [plugin](#plugin)
-* [show](#show)
-* [star](#star)
-* [stat](#stat)
-* [session](#session)
-* [submission](#submission)
-* [submit](#submit)
-* [test](#test)
-* [user](#user)
-* [version](#version)
+- [help](#help)
+- [cache](#cache)
+- [config](#config)
+- [list](#list)
+- [plugin](#plugin)
+- [session](#session)
+- [show](#show)
+- [star](#star)
+- [stat](#stat)
+- [submission](#submission)
+- [submit](#submit)
+- [test](#test)
+- [user](#user)
+- [version](#version)
 
 # help
 
@@ -141,6 +141,7 @@ Navigate the quations.
         * `algorithms`
         * `database`
         * `shell`
+        * `concurrency`
     * by company (require plugin)
     * by topic (require plugin)
 * `-s` to show statistic counters of the output list.

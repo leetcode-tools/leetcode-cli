@@ -135,6 +135,7 @@ describe('helper', function() {
       assert.equal(h.langToExt('rust'), '.rs');
       assert.equal(h.langToExt('scala'), '.scala');
       assert.equal(h.langToExt('swift'), '.swift');
+      assert.equal(h.langToExt('typescript'), '.ts');
     });
   }); // #langToExt
 
@@ -146,6 +147,8 @@ describe('helper', function() {
       assert.equal(h.extToLang('./file.cs'), 'csharp');
       assert.equal(h.extToLang('../file.go'), 'golang');
       assert.equal(h.extToLang('file.java'), 'java');
+      assert.equal(h.extToLang('~/leetcode/../file.sql'), 'mysql');
+      assert.equal(h.extToLang('~/leetcode/hello.php'), 'php');
       assert.equal(h.extToLang('c:/file.js'), 'javascript');
       assert.equal(h.extToLang('~/leetcode/../file.sql'), 'mysql');
       assert.equal(h.extToLang('~/leetcode/hello.php'), 'php');
@@ -154,25 +157,27 @@ describe('helper', function() {
       assert.equal(h.extToLang('~/leetcode/file.rs'), 'rust');
       assert.equal(h.extToLang('/tmp/file.scala'), 'scala');
       assert.equal(h.extToLang('~/leetcode/file.swift'), 'swift');
+      // typescript also allowed
       assert.equal(h.extToLang('/home/skygragon/file.dat'), 'unknown');
     });
   }); // #extToLang
 
   describe('#langToCommentStyle', function() {
     it('should ok', function() {
-      const C_STYLE = {start: '/*', line: ' *', end: ' */'};
-      const RUBY_STYLE = {start: '#', line: '#', end: '#'};
-      const SQL_STYLE = {start: '--', line: '--', end: '--'};
+      const C_STYLE = {start: '/*', line: ' *', end: ' */', singleLine: '//'};
+      const RUBY_STYLE = {start: '#', line: '#', end: '#', singleLine: '#'};
+      const SQL_STYLE = {start: '--', line: '--', end: '--', singleLine: '--'};
 
       assert.deepEqual(h.langToCommentStyle('bash'), RUBY_STYLE);
       assert.deepEqual(h.langToCommentStyle('c'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('cpp'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('csharp'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('golang'), C_STYLE);
+      assert.deepEqual(h.langToCommentStyle('php'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('java'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('javascript'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('mysql'), SQL_STYLE);
-      assert.deepEqual(h.langToCommentStyle('php'), C_STYLE);
+      assert.deepEqual(h.langToCommentStyle('rust'), C_STYLE);
       assert.deepEqual(h.langToCommentStyle('python'), RUBY_STYLE);
       assert.deepEqual(h.langToCommentStyle('python3'), RUBY_STYLE);
       assert.deepEqual(h.langToCommentStyle('ruby'), RUBY_STYLE);

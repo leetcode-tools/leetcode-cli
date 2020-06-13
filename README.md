@@ -6,6 +6,9 @@
 
 # leetcode-cli
 
+> Note: This repository is forked from [leetcode-cli](https://github.com/skygragon/leetcode-cli) for temporary usage. 
+> Note: Copy cookie from webbrowser and Using **leetcode user -c** can temporary fix can't [login problem](https://github.com/jdneo/vscode-leetcode/issues/478).
+
 <img src="https://github.com/skygragon/leetcode-cli/raw/master/docs/logo.png" align="right">
 
 A productive cli tool to enjoy leetcode!
@@ -35,10 +38,13 @@ Great thanks to leetcode.com, a really awesome website!
 
 ## Quick Start
 
-	Read help first                         $ leetcode help
-	Login with your leetcode account        $ leetcode user -l
-	Browse all questions                    $ leetcode list
-	Choose one question                     $ leetcode show 1 -g -l cpp
+	Read help first                           $ leetcode help
+	Login with your leetcode account          $ leetcode user -l
+	Login with third party account--GitHub    $ leetcode user -g
+	Login with third party account--LinkedIn  $ leetcode user -i
+	Cookie login with cookie                  $ leetcode user -c
+	Browse all questions                      $ leetcode list
+	Choose one question                       $ leetcode show 1 -g -l cpp
 	Coding it!
-	Run test(s) and pray...                 $ leetcode test ./two-sum.cpp -t '[3,2,4]\n7'
-	Submit final solution!                  $ leetcode submit ./two-sum.cpp
+	Run test(s) and pray...                   $ leetcode test ./two-sum.cpp -t '[3,2,4]\n7'
+	Submit final solution!                    $ leetcode submit ./two-sum.cpp
