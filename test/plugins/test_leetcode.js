@@ -124,10 +124,15 @@ describe('plugin:leetcode', function() {
       nock('https://leetcode.com')
         .get('/api/problems/concurrency/')
         .replyWithFile(200, './test/mock/problems.json.20160911');
-
+      
+      nock('https://leetcode.com')
+        .post('/graphql')
+        .times(config.sys.tags.length)
+        .replyWithFile(200, './test/mock/tags.json.20200911');
+      
       plugin.getProblems(function(e, problems) {
         assert.equal(e, null);
-        assert.equal(problems.length, 377 * 4);
+        assert.equal(problems.length, 377);
         done();
       });
     });
