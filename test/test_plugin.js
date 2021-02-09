@@ -155,7 +155,7 @@ describe('plugin', function() {
     });
   }); // #Plugin.copy
 
-  describe('#Plugin.installMissings', function() {
+  describe('#Plugin.installMissing', function() {
     const PLUGINS = [
       new Plugin(0, '0', 'missing'),
       new Plugin(1, '1', '2018.01.01'),
@@ -174,13 +174,13 @@ describe('plugin', function() {
 
     it('should ok', function(done) {
       Plugin.plugins = PLUGINS;
-      Plugin.installMissings(function(e) {
+      Plugin.installMissing(function(e) {
         assert.notExists(e);
         assert.deepEqual(expected, ['0', '2']);
         done();
       });
     });
-  }); // #Plugin.installMissings
+  }); // #Plugin.installMissing
 
   describe('#delete', function() {
     it('should ok', function() {
