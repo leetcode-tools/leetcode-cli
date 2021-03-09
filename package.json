@@ -56,7 +56,7 @@
     "moment": "^2.20.1",
     "nconf": "0.10.0",
     "ora": "3.0.0",
-    "prompt": "1.0.0",
+    "prompt": "1.1.0",
     "request": "2.88.0",
     "supports-color": "5.5.0",
     "underscore": "1.9.1",
