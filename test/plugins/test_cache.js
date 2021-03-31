@@ -19,6 +19,7 @@ describe('plugin:cache', function() {
     {id: 0, fid: 0, name: 'name0', slug: 'slug0', starred: false, desc: '<pre></pre>', likes: '1', dislikes: '1', category: 'algorithms'},
     {id: 1, fid: 1, name: 'name1', slug: 'slug1', starred: true, desc: '<pre></pre>', likes: '1', dislikes: '1', category: 'algorithms'}
   ];
+  const TRANSLATION_CONFIGS = { useEndpointTranslation: false };
   const PROBLEM = {id: 0, fid: 0, slug: 'slug0', category: 'algorithms'};
 
   before(function() {
@@ -51,6 +52,7 @@ describe('plugin:cache', function() {
   describe('#getProblems', function() {
     it('should getProblems w/ cache ok', function(done) {
       cache.set('problems', PROBLEMS);
+      cache.set(h.KEYS.translation, TRANSLATION_CONFIGS);
 
       plugin.getProblems(false, function(e, problems) {
         assert.equal(e, null);
@@ -84,6 +86,7 @@ describe('plugin:cache', function() {
   describe('#getProblem', function() {
     it('should getProblem w/ cache ok', function(done) {
       cache.set('problems', PROBLEMS);
+      cache.set(h.KEYS.translation, TRANSLATION_CONFIGS);
       cache.set('0.slug0.algorithms', PROBLEMS[0]);
 
       plugin.getProblem(_.clone(PROBLEM), false, function(e, problem) {
@@ -135,6 +138,7 @@ describe('plugin:cache', function() {
   describe('#updateProblem', function() {
     it('should updateProblem ok', function(done) {
       cache.set('problems', PROBLEMS);
+      cache.set(h.KEYS.translation, TRANSLATION_CONFIGS);
 
       const kv = {value: 'value00'};
       const ret = plugin.updateProblem(PROBLEMS[0], kv);
