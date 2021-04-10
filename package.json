@@ -1,6 +1,6 @@
 {
   "name": "@baoxi/vsc-leetcode-cli",
-  "version": "2.7.1",
+  "version": "2.8.1",
   "description": "A cli tool to enjoy leetcode!",
   "engines": {
     "node": ">=12"
@@ -60,7 +60,7 @@
     "prompt": "1.1.0",
     "request": "2.88.2",
     "supports-color": "8.1.1",
-    "underscore": "1.12.0",
+    "underscore": "1.12",
     "wordwrap": "1.0.0",
     "yargs": "16.2.0"
   },
